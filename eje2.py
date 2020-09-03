@@ -1,3 +1,5 @@
+#Manuel Eduardo Alvarez Sanchez
+#manuel.alvarez.sanchez@ucsp.edu.pe
 def gerundio(cadena):
     tam=len(cadena)
     res1 = cadena.find(' ')

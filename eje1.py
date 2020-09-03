@@ -1,3 +1,6 @@
+#Manuel Eduardo Alvarez Sanchez
+#manuel.alvarez.sanchez@ucsp.edu.pe
+
 def contar(cadena):
     arr=""
     correcto=True
