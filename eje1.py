@@ -1,19 +1,35 @@
 def contar(cadena):
-    cont_parentesis_abre=0
-    cont_parentesis_cierra=0
-    cont_laves_abre=0
-    cont_llaves_cierra=0
+    arr=""
+    correcto=True
     for char in cadena:
         if char == '(':
-            cont_parentesis_abre=cont_parentesis_abre+1
+            arr=arr+'('
         elif char == ')':
-            cont_parentesis_cierra=cont_parentesis_cierra+1
+            tam=len(arr)
+            if tam-1<0:
+                correcto=False
+                break
+            if arr[tam-1] == '(':
+                tama=tam-1;
+                arr=arr[0:tama]
+            else:
+                correcto=False
+                break
         elif char == '[':
-            cont_laves_abre=cont_laves_abre+1
+            arr=arr+'['
         elif char == ']':
-            cont_llaves_cierra=cont_llaves_cierra+1
-    
-    if (cont_parentesis_abre==cont_parentesis_cierra) and (cont_laves_abre==cont_llaves_cierra):
+            tam=len(arr)
+            if tam-1<0:
+                correcto=False
+                break
+            if arr[tam-1] == '[':
+                tama=tam-1;
+                arr=arr[0:tama]
+            else:
+                correcto=False
+                break
+
+    if len(arr)==0 and correcto==True:
         print("SI")
     else:
         print("NO")
